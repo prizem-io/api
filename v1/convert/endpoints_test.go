@@ -26,7 +26,7 @@ func TestEndpoints(t *testing.T) {
 	assert.Nil(t, convert.DecodeContainer(nil))
 	assert.Nil(t, convert.DecodePorts(nil))
 
-	id, _ := uuid.NewV4()
+	id := uuid.NewV4()
 	nodes := []api.Node{
 		{
 			ID:         id,
