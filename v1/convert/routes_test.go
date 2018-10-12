@@ -82,8 +82,9 @@ func TestRoutes(t *testing.T) {
 						},
 						Timeout: durationPtr(6 * time.Second),
 						Retry: &api.Retry{
-							Attempts:      3,
-							PerTryTimeout: api.Duration(3 * time.Second),
+							Attempts:           3,
+							ResponseClassifier: "retryableRead5XX",
+							PerTryTimeout:      api.Duration(3 * time.Second),
 						},
 						Policies: []api.Configuration{
 							{
