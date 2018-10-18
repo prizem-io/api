@@ -11,7 +11,7 @@ option (gogoproto.equal_all) = false;
 option (gogoproto.gostring_all) = false;
 
 service HealthCheckReporter {
-	rpc StreamHealthCheck(HeathRequest) returns (HealthAssignments) {
+	rpc Report(HeathRequest) returns (HealthAssignments) {
 	}
 }
 
